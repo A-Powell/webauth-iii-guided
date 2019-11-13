@@ -8,10 +8,11 @@ module.exports = {
 };
 
 function find() {
-  return db('users').select('id', 'username', 'password');
+  return db('users').select('id', 'username');
 }
 
 function findBy(filter) {
+  // make sure to include the role information
   return db('users').where(filter);
 }
 
